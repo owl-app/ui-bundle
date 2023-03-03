@@ -1,0 +1,451 @@
+# This file is part of the Sylius package.
+# (c) Paweł Jędrzejewski
+
+sylius:
+    ui:
+        contains: 'Zawiera'
+        not_contains: 'Nie zawiera'
+        equal: 'Równe'
+        not_equal: 'Różne od'
+        empty: 'Brak'
+        not_empty: 'Nie pusty'
+        starts_with: 'Rozpoczyna się od'
+        ends_with: 'Kończy się na'
+        in: 'W'
+        not_in: 'Nie w'
+        value: 'Wartość'
+        all: 'Wszystko'
+        yes_label: 'Tak'
+        no_label: 'Nie'
+        from: 'Od'
+        to: 'Do'
+        code: Kod
+
+owl:
+    form:
+        common:
+            name: Nazwa
+            description: Opis
+            status: Status
+            comment: Komentarz
+            first_name: Imię
+            last_name: Nazwisko
+            phone_number: Numer telefonu
+            subject: Temat
+            date: Data
+            comments: Komentarz
+            symbol: Symbol
+            unit: Jednostka
+            price: Cena
+            other: Inne
+            no_category: Brak przypisanej kategorii
+            assign_user: Przypisany użytkownik
+            assign_company: Przypisana firma
+            phone: Telefon
+            password: Hasło
+            date_issue: Data wystawienia
+        role:
+            canonical_name: Nazwa kanoniczna dla roli
+            choice_theme: Wybierz szablon widoku
+        equipment:
+            user: Użytkownik przypisany do wyposażenia
+            company: Firma przypisana do wyposażenia
+            category: Kategoria przypisana do wyposażenia
+        equipment_event:
+            date_notify: Data przypomnienia zdarzenia
+        location:
+            user: Użytkownik przypisany do lokalizacji
+            company: Firma przypisana do lokalizacji
+            category: Kategoria przypisana do lokalizacji
+            search_product: Wyszukaj wyposażenie i wybierz, aby dodać
+        mailbox:
+            host: Host
+            port: Port
+        notification:
+            current_from: Data od której ma się pojawiać komunikat
+            current_to: Data do której ma się pojawiać komunikat
+            group_assigned: Grupa dla której ma się wyświetlić komunikat
+        login:
+            username: 'Nazwa użytkownika'
+            password: 'Hasło'
+            remember_me: 'Zapamiętaj mnie'
+        registration:
+            company: Firma na którą ma być zarejestrowane konto
+            reason_rejection: Powód odrzucenia rejestracji
+        setting:
+            dashboard_description: Opis do strony głównej w panelu
+            login_page_description: Opis do strony logowania
+        option:
+            name: 'Nazwa'
+        notes: 'Dodatkowe uwagi'
+        variant:
+            tracked: 'Śledzone'
+        user:
+            role: 'Rola przypisana do użytkownika'
+            company: 'Firma przypisana do użytkownika'
+            no_company: 'Brak przypisanej firmy'
+            no_user: 'Brak przypisanego użytkownika'
+            display_name: Nazwa wyświetlana użytkownika
+            note: Notatka prywatna
+            mailbox_footer: Stopka do maila
+        actions:
+            referer: 'Zapisz i zamknij'
+            update: 'Zapisz i edytuj'
+            save: 'Zapisz'
+            generate: Wygeneruj
+        equipment_refueling:
+            mileage: Przebieg w kilometrach
+            quantity: Ilość litrów
+            value: Wartość
+    country:
+        empty: 'Brak'
+        pl: 'Polska'
+        cz: 'Czechy'
+        sk: 'Słowcja'
+    ui:
+        created_by: 'Utworzone przez'
+        services: 'Wykonawcy'
+        cities: 'Miasta'
+        abandoned: 'Porzucony'
+        about: 'O stronie'
+        accept: 'Akceptuję'
+        accepted: 'Zaakceptowany'
+        action: 'Akcja'
+        actions: 'Akcje'
+        add: 'Dodaj'
+        address: 'Adres'
+        admin_users: 'Użytkownicy'
+        administration: 'Administracja'
+        administration_dashboard: 'Panel administracyjny'
+        administration_panel_login: 'Logowanie do panelu administracyjnego'
+        all: 'Wszystko'
+        author: 'Autor'
+        average_rating: 'Ocena'
+        back: 'Wróć'
+        blocks: 'Bloki'
+        body: 'Zawartość'
+        build: 'Zbuduj'
+        bulk_actions: 'Masowe akcje'
+        by_position: 'Wg pozycji'
+        calculator: 'Kalkulator'
+        call_us: 'Zadzwoń do nas!'
+        cancel: 'Anuluj'
+        cancelled: 'Anulowane'
+        cart: 'Koszyk'
+        cart_locked: 'Koszyk zablokowany'
+        cart_summary: 'Podsumowanie koszyka'
+        categorization: 'Kategoria'
+        category: 'Kategoria'
+        change_password: 'Zmień hasło'
+        change_payment_method: 'Zmień metodę płatności'
+        change_position: 'Zmień położenie'
+        change_shipping_method: 'Zmień metodę wysyłki'
+        change_your_password: 'Zmiana hasła'
+        changes: 'Zmiany'
+        charges_and_taxes: 'Opłaty i podatki'
+        cheapest_first: 'Pierwszy najtańszy'
+        checkbox: 'Pole wyboru'
+        checking_out_as: 'Sprawdzanie jako'
+        checkout: 'Zamów'
+        choose_file: 'Wybierz plik'
+        city: 'Miejscowość'
+        clear: 'Wyczyść'
+        clear_cart: 'Wyczyść koszyk'
+        clear_filters: 'Wyczyść filtry'
+        code: 'Kod'
+        color: 'Kolor'
+        comment: 'Komentarz'
+        company: 'Firma'
+        complete: 'Zakończ'
+        completed: 'Zakończone'
+        configuration: 'Konfiguracja'
+        confirm_your_action: 'Potwierdź akcję'
+        confirmation: 'Potwierdzenie'
+        confirmation_title: 'Powtórz nowe hasło'
+        confirmed: 'Potwierdzony'
+        contains: 'Zawiera'
+        content: 'Treść'
+        countries: 'Kraje'
+        country: 'Kraj'
+        country_details: 'Szczegóły kraju'
+        coupon: 'Kupon'
+        coupon_based: 'Z wykorzystaniem kuponów'
+        coupons: 'Kupony'
+        create: 'Utwórz'
+        save_close: 'Zapisz i zamknij'
+        save_update: 'Zapisz i edytuj'
+        dashboard: 'Panel Systemu Ewidencji'
+        data: 'Dane'
+        date: 'Data'
+        datetime: 'Data i godzina'
+        delete: 'Usuń'
+        delete_image: 'Usuń zdjęcie'
+        deleted: 'Usunięto'
+        description: 'Opis'
+        details: 'Szczegóły'
+        disable: 'Wyłącz'
+        disabled: 'Nieaktywny'
+        display: 'Pokaż'
+        emails: 'Adresy email'
+        enable: 'Włącz'
+        equal: 'Równe'
+        error: 'Błąd'
+        filter: 'Filtruj'
+        filters: 'Filtry'
+        first_name: 'Imię'
+        forgot_password: 'Nie pamiętasz hasła?'
+        get_support: 'Pomoc'
+        go: 'Przejdź'
+        home: 'Panel'
+        in: 'W'
+        lastname: 'Nazwisko'
+        logged_at: 'Zalogowano o'
+        logged_in_as: 'Zalogowany jako %username%'
+        login: 'Zaloguj'
+        login_button: 'Zaloguj'
+        logout: 'Wyloguj'
+        male: 'Mężczyzna'
+        manage: 'Zarządzaj'
+        menu_nodes: 'Węzły menu'
+        menus: 'Menu'
+        my_account: 'Moje konto'
+        name: 'Nazwa'
+        new: 'Nowy'
+        next: 'Następne'
+        or: 'lub'
+        order: 'zamówienie'
+        page: 'Strona'
+        pages: 'Strony'
+        password: 'Hasło'
+        phone_number: 'Numer telefonu'
+        postcode: 'Kod pocztowy'
+        review_details: 'Szczegóły recenzji'
+        reviews: 'Recenzje'
+        roles: 'Role'
+        save: 'Zapisz'
+        save_changes: 'Zapisz zmiany'
+        search: 'Szukaj'
+        select: 'Wybierz'
+        send: 'Wyślij'
+        shop_by: 'Przeglądaj'
+        short_description: 'Krótki opis'
+        show: 'Pokaż'
+        show_all: 'Pokaż wszystko'
+        sign_in: 'Zaloguj'
+        sign_in_here: 'Zaloguj się tutaj'
+        sign_out: 'Wyloguj'
+        sort: 'Sortowanie:'
+        sort_by_date: 'Sortuj wg daty'
+        state: 'Status'
+        status: 'Status'
+        street: 'Adres'
+        subject: 'Temat'
+        success: 'Sukces'
+        sylius_logo: 'Sylius'
+        text: 'Tekst'
+        textarea: 'Pole tekstowe'
+        thank_you: 'Dziękujemy!'
+        title: 'Tytuł'
+        to: 'Do'
+        created_at: 'Data utworzenia'
+        show_service: 'Szczegóły wykonawcy'
+        nip: 'NIP'
+        post_code: 'Kod pocztowy'
+        mobile_phone: 'Telefon komórkowy'
+        landline_phone: 'Telefon stacjonarny'
+        permanent_contract_number: 'Numer umowy stałej'
+        contact_person: 'Osoba kontaktowa'
+        settlement_notes: 'Uwagi rozliczenia'
+        list_reviews: 'Lista recenzji'
+        review: 'Recenzja'
+        province: 'Województwo'
+        manage_cities_available_in_system: 'Zarządzaj miastami dostępnymi w systemie'
+        edit: 'Edytuj'
+        edit_city: 'Edycja miasta'
+        enabled: 'Aktywny'
+        edit_service: 'Edycja wykonawcy'
+        manage_services: 'Zarządzanie wykonawcami'
+        new_review: 'Nowa recenzja'
+        this_message_contains_errors: 'Ten formularz zawiera błędy.'
+        new_service: 'Nowy wykonawca'
+        search_location: 'Wyszukiwanie po lokalizacji'
+        distance_search: 'Odległość od miasta w km'
+        rbac_roles: 'Role'
+        manage_rbac_roles_available_in_system: 'Zarządzenie rolami dostępnymi w systemie'
+        rbac_permissions: 'Lista dostępów w systemie'
+        manage_permissions_in_system: 'Zarządzanie dostępami w systemie'
+        assign_permissions: 'Przypisz uprawnienia'
+        permissions_for_role: 'Dostępy dla roli'
+        manage_permissions_for_role: 'Zarządznie dostępami dla roli'
+        admin_user_permissions: Dostępy użytkownika
+        manage_user_permissions: Zarządzenie dostępami użytkownika
+        assign_permission_to_role: Przypisywanie dostępów do roli
+        users: Użytkownicy
+        list_user_permissions: Lista dostępów użytkownika
+        files: Pliki
+        locales: Ustawienia regionalne
+        manage_languages_available_in_the_system: Zarządzanie językami dostępnymi w systemie
+        new_locale: Nowe ustawienia regionalne
+        edit_locale: Edytuj ustawienia regionalne
+        close: Zamknij
+        suggestions: Sugestie
+        create_suggestion: Dodawanie sugestii
+        manage_suggestions: Zarządzanie sugestiami
+        user: Użytkownik
+        change_status_suggestion: Zmiana statusu sugestii
+        status_new: Nowy
+        status_in_progress: W trakcie realizacji
+        status_realized: Zrealizowane
+        status_cancelled: Anulowany
+        change_status: Zmień status
+        history_suggestion_status: Historia statusów sugestii
+        history_status: Historia statusów
+        general_info: 'Informacje ogólne'
+        additional_information: 'Dodatkowe informacje'
+        preferences: 'Preferencje'
+        new_admin_user: Dodawanie nowego użytkownika
+        edit_admin_user: 'Edytuj użytkownika'
+        are_your_sure_you_want_to_perform_this_action: 'Czy na pewno chcesz wykonać tę akcję?'
+        no_label: Nie
+        yes_label: Tak
+        info: Info
+        no_results_to_display: Brak wyników do wyświetlenia
+        companies: Firmy
+        manage_companies: Zarządzanie firmami w systemie
+        create_company: Dodawanie firmy
+        edit_company: Edycja firmy
+        show_company: Szczegóły firmy
+        phone: Telefon
+        email: E-mail
+        trade: Branża
+        permissions: Uprawnienia
+        locale: Język
+        equipment: Wyposażenie
+        show_equipment: Szczegóły wyposażenia
+        manage_equipments: Zarządanie wyposażeniem w systemie
+        new_equipment: Dodawanie wyposażenia
+        edit_equipment: Edycja wyposażenia
+        symbol: Symbol
+        unit: Jednostka
+        price: Cena
+        no_new_notifications: Brak nowych powiadomień
+        locations: Lokalizacje
+        show_location: Szczegóły lokalizacji
+        manage_locations: Zarządzenie lokalizacjami w systemie
+        new_location: Dodawanie nowej lokalizacji
+        edit_location: Edycja lokalizacji
+        actual_name_location: Aktualna nazwa lokalizacji
+        old_name_location: Stara nazwa lokalizacji
+        date_created: Data utworzenia
+        date_updated: Data aktualizacji
+        other: Inne
+        location: Lokalizacja
+        categories: Kategorie
+        comments: Uwagi
+        history_equipment: Historia wyposażenia
+        history_location: Historia lokalizacji
+        equipment_categories: Kategorie wyposażenia
+        manage_equipment_category: Zarządanie kategoriami do wyposażenia
+        create_equipment_category: Dodawanie kategorii wyposażenia
+        edit_equipment_category: Edycja kategorii wyposażenia
+        generate_pdf: Wygeneruj PDF
+        generate_excel: Wygeneruj EXCEL
+        please_chose_your_version_excel: Prosze wybrać wersję excel'a
+        old_version_excel: Starsza wersja excel'a (xls 2003)
+        new_version_excel: Nowa wersja excel'a (xlsx)
+        data_location: Dane lokalizacji
+        no_value: Brak wartości
+        sum: Suma
+        location_categories: Kategorie lokalizacji
+        manage_location_category: Zarządzanie kategoriami lokalizacji
+        create_location_category: Dodawanie kategorii lokalizacji
+        edit_location_category: Edycja kategorii lokalizacji
+        equipments: Wyposażenie
+        canonical_name: Nazwa kanoniczna
+        theme_name_for_view: Nazwa szablonu widoku
+        manage_users_able_to_access_administration_panel: Zarządzanie użytkownikami, którzy mają dostęp do panelu administracyjnego
+        user_display_name: Nazwa wyświetlana użytkownika
+        note_user: Notatka użytkownika
+        role: Rola
+        new_rbac_role: Dodawanie nowej roli
+        edit_rbac_role: Edycja roli
+        mailbox: Skrzynka pocztowa
+        mailboxes: Skrzynki pocztowe
+        manage_mailboxes: Zarządzanie skrzynkami pocztowymi
+        create_mailbox: Dodawanie poczty
+        edit_mailbox: Edycja poczty
+        details_mailbox: Szczegóły poczty
+        host: Host
+        port: Port
+        date_issue: Data wystawienia
+        added_by: Dodane przez
+        notifications: Komunikaty
+        manage_notifications: Zarządzanie komunikatami
+        create_notification: Dodawanie komunikatu
+        edit_notification: Edycja komunikatu
+        edit_notification_file: Edycja pliku
+        to_all: do wszystkich
+        notification_group_assigned_role_admin_company: do administratorów firmy
+        notification_group_assigned_role_user: do użytkowników
+        details_notification_of_the_day: Szczegóły komunikatu z dnia
+        reset_password: Resetuj hasło
+        set_a_new_password_for_your_account: Ustaw nowe hasło dla swojego konta
+        reset_button: 'Zresetuj'
+        system_settings: Ustawienia systemu
+        manage_settings_available_in_system: Zarządzanie ustawieniami dostępnymi w systemie
+        register: Zarejestruj się
+        register_in: Zarejestruj się
+        create_a_new_system_account: Utwórz nowe konto w Systemie Ewidencji
+        have_an_account_already: Czy masz już konto?
+        account_credentials: Dane konta
+        personal_information: Dane osobowe
+        create_an_account: Utwórz konto
+        company_inforamtion: Dane firmy
+        welcome_to_our_system: 'Zapraszamy do naszego systemu'
+        registration: Rejestracja
+        date_verified_email: Data weryfikacji e-mail przez użytkownika
+        user_has_not_verified_email: Użytkownik nie zweryfikował adresu e-mail
+        registration_company: Firma na którą ma być zarejestrowane konto
+        last_name: Nazwisko
+        registration_inforamtion: Dane rejestracji
+        registration_status_new: Nowa rejestracja
+        registration_status_rejected: Rejestracja odrzucona
+        registration_status_accepted: Rejestracja zaakceptowana
+        company_which_account_was_registered: Firma na którą zarejestrowano konto
+        accept_registration: Akceptacja rejestracji
+        reject_registration: Odrzucenie rejestracji
+        show_registration: Szczegóły rejestracji
+        reject: Odrzuć
+        empty: Brak
+        date_change_status: Data zmiany statusu
+        reason_rejection_registration: Powód odrzucenia rejestracji
+        registration_new: Rejestracja (Nowa)
+        registration_accepted: Rejestracja (Zaakceptowana)
+        registration_rejected: Rejestracja (Odrzucona)
+        start_using_system: Zacznij korzystać z systemu
+        equipment_attributes: Atrybuty wyposażenia
+        manage_attributes_of_your_equipments: Zarządzaj cechami wyposażenia
+        new_equipment_attribute: Nowy atrybut wyposażenia
+        edit_equipment_attribute: Edycja atrybutu wyposażenia
+        type: Typ
+        attributes: Atrybuty
+        add_attributes: Dodaj atrybuty
+        no_attributes: Brak atrybutów
+        event_equipment: Zdarzenia do wyposażenia
+        refueling_equipment: Tankowania
+        equipment_data: Dane wyposażenia
+        actual_name_equipment: Aktualna nazwa wyposażenia
+        old_name_equipment: Stara nazwa wyposażenia
+        mileage_equipment: Przebieg w km
+        quantity_equipment: Ilość litrów
+        value_equipment: Wartość
+        list_refuelings: Lista tankowań
+        manage_refueling: Zarządzanie tankowaniami
+        create_refueling: Dodawanie tankowania
+        manage_events: Zarządzanie zdarzeniami
+        list_events: Lista zdarzeń
+        create_event: Dodawanie zdarzenia
+        date_refueling: Data tankowania
+        date_event: Data zdarzenia
+        date_notify: Data przypomnienia
+
