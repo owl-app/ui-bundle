@@ -48,6 +48,7 @@ owl:
             street: Adres
             nip: NIP
             post_code: Kod pocztowy
+            email: E-mail
         role:
             canonical_name: Nazwa kanoniczna dla roli
             choice_theme: Wybierz szablon widoku
