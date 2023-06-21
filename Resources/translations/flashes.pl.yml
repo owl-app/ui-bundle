@@ -1,30 +1,20 @@
-# This file is part of the Sylius package.
-# (c) Paweł Jędrzejewski
-
 owl:
     rbac:
         permission:
-            add_success: 'Dostęp został pomyślnie dodane'
-            remove_success: 'Dostał został pomyślnie usunięty'
-    channel:
-        delete_error: 'Kanał nie może być usunięty, wymagane jest aby co najmniej jeden kanał był włączony.'
-    checkout:
-        complete_error: 'Wystąpił nieoczekiwany problem z realizacją zamówienia. Spróbuj ponownie złożyć zamówienie.'
-    contact:
-        request_success: 'Twoja prośba o kontakt została przesłana.'
-        request_error: 'Wystąpił problem w trakcie przesyłania prośby o kontakt. Prosimy spróbować później.'
-    customer:
-        add_address: 'Adres został pomyślnie dodany.'
-        impersonate: 'Pomyślnie zalogowano się jako klient %name%.'
-        set_address_as_default: 'Adres został ustawiony jako domyślny.'
-    order:
-        apply_state_machine_transition_error: 'Wystąpił nieoczekiwany problem w trakcie aktualizacji zamówienia. Prosimy spróbować ponownie.'
-        promotion_integrity: 'Nie możesz ponownie skorzystać z promocji o nazwie %promotionName%.'
-        total_integrity: 'Zmieniono sumę za Twoje zamówienie. Sprawdź zamówienie i zatwierdź je ponownie.'
-        update_error: 'Wystąpił nieoczekiwany problem w trakcie aktualizacji zamówienia. Prosimy spróbować ponownie.'
-    payment:
-        apply_state_machine_transition_error: 'Wystąpił nieoczekiwany problem w trakcie aktualizacji płatności. Spróbuj uaktualnić ją ponownie.'
-    product:
-        out_of_stock: 'W sklepie dostępne jest tylko %quantity% sztuk produktu.'
-    product_variant:
-        update_error: 'Wystąpił nieoczekiwany problem w trakcie aktualizacji wariantu produktu. Spróbuj uaktualnić go ponownie.'
+            add_success: Dostęp został pomyślnie dodany
+            remove_success: Dostęp został pomyślnie usunięty
+
+sylius:
+    resource:
+        create: Pozycja został pomyślnie utworzona.
+        update: Pozycja został pomyślnie uaktualniona.
+        delete: Pozycja został pomyślnie usunięta.
+        move: Pozycja został pomyślnie przeniesiona.
+        generate: Pozycje zostały pomyślnie wygenerowane.
+        revert: Pozycja został pomyślnie przywrócona.
+        restore_deleted: Pozycja został pomyślnie odzyskana.
+        enable: Pozycja został pomyślnie włączona.
+        disable: Pozycja został pomyślnie wyłączona.
+        delete_error: Nie można usunąć, pozycji jest w użyciu.
+        race_condition_error: Nie można uaktualnić, pozycja został już wcześniej zmodyfikowana.
+        something_went_wrong_error: Coś poszło nie tak, spróbuj ponownie.

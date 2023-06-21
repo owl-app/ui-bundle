@@ -1,24 +1,21 @@
-# This file is part of the Sylius package.
-# (c) Paweł Jędrzejewski
-
 sylius:
     ui:
-        contains: 'Zawiera'
-        not_contains: 'Nie zawiera'
-        equal: 'Równe'
-        not_equal: 'Różne od'
-        empty: 'Brak'
-        not_empty: 'Nie pusty'
-        starts_with: 'Rozpoczyna się od'
-        ends_with: 'Kończy się na'
-        in: 'W'
-        not_in: 'Nie w'
-        value: 'Wartość'
-        all: 'Wszystko'
-        yes_label: 'Tak'
-        no_label: 'Nie'
-        from: 'Od'
-        to: 'Do'
+        contains: Zawiera
+        not_contains: Nie zawiera
+        equal: Równe
+        not_equal: Różne od
+        empty: Brak
+        not_empty: Nie pusty
+        starts_with: Rozpoczyna się od
+        ends_with: Kończy się na
+        in: W
+        not_in: Nie w
+        value: Wartość
+        all: Wszystko
+        yes_label: Tak
+        no_label: Nie
+        from: Od
+        to: Do
         code: Kod
 
 owl:
@@ -41,9 +38,16 @@ owl:
             no_category: Brak przypisanej kategorii
             assign_user: Przypisany użytkownik
             assign_company: Przypisana firma
+            assign_companies: Firmy do których użytkownik będzie miał dostęp
             phone: Telefon
             password: Hasło
             date_issue: Data wystawienia
+            date_from: Data od
+            date_to: Data do
+            city: Miasto
+            street: Adres
+            nip: NIP
+            post_code: Kod pocztowy
         role:
             canonical_name: Nazwa kanoniczna dla roli
             choice_theme: Wybierz szablon widoku
@@ -51,8 +55,16 @@ owl:
             user: Użytkownik przypisany do wyposażenia
             company: Firma przypisana do wyposażenia
             category: Kategoria przypisana do wyposażenia
+            addon: Dodatki
+        equipment_category:
+            addon: Dodatki
         equipment_event:
             date_notify: Data przypomnienia zdarzenia
+            mileage_status: Stan KM
+            type: Rodzaj zdarzenia
+            value: Wartość
+            place: Miejsce zdarzenia
+            choice_type: wybierz rodzaj zdarzenia
         location:
             user: Użytkownik przypisany do lokalizacji
             company: Firma przypisana do lokalizacji
@@ -66,9 +78,9 @@ owl:
             current_to: Data do której ma się pojawiać komunikat
             group_assigned: Grupa dla której ma się wyświetlić komunikat
         login:
-            username: 'Nazwa użytkownika'
-            password: 'Hasło'
-            remember_me: 'Zapamiętaj mnie'
+            username: Nazwa użytkownika
+            password: Hasło
+            remember_me: Zapamiętaj mnie
         registration:
             company: Firma na którą ma być zarejestrowane konto
             reason_rejection: Powód odrzucenia rejestracji
@@ -76,207 +88,218 @@ owl:
             dashboard_description: Opis do strony głównej w panelu
             login_page_description: Opis do strony logowania
         option:
-            name: 'Nazwa'
-        notes: 'Dodatkowe uwagi'
+            name: Nazwa
+        notes: Dodatkowe uwagi
         variant:
-            tracked: 'Śledzone'
+            tracked: Śledzone
         user:
-            role: 'Rola przypisana do użytkownika'
-            company: 'Firma przypisana do użytkownika'
-            no_company: 'Brak przypisanej firmy'
-            no_user: 'Brak przypisanego użytkownika'
+            role: Rola przypisana do użytkownika
+            company: Firma przypisana do użytkownika
+            no_company: Brak przypisanej firmy
+            no_user: Brak przypisanego użytkownika
             display_name: Nazwa wyświetlana użytkownika
             note: Notatka prywatna
+            mailboxes: Skrzynki przypisane do użytkownika
             mailbox_footer: Stopka do maila
+            equipment_categories: Kategorie wyposażenia przypisane do użytkownika
         actions:
-            referer: 'Zapisz i zamknij'
-            update: 'Zapisz i edytuj'
-            save: 'Zapisz'
+            referer: Zapisz i zamknij
+            update: Zapisz i edytuj
+            save: Zapisz
             generate: Wygeneruj
         equipment_refueling:
-            mileage: Przebieg w kilometrach
+            mileage: Stan licznika km
             quantity: Ilość litrów
             value: Wartość
+            place: Miejsce tankowania
+            comment: Uwagi
+            additional_purchase_value: Wartość zakupów
+            additional_purchase_desc: Opis
+        stats:
+            companies: Firmy dla których ma być wygenerowany raport
+            users: Użytkownicy dla których ma być wygenerowany raport
+            report_type: Rodzaj raportu 
+            choice_report: - wybierz raport - 
+            refueling_date_from: Data tankowania od
+            refueling_date_to: Data tankowania do
+        equipment_attribute:
+            position: Pozycja
     country:
-        empty: 'Brak'
-        pl: 'Polska'
-        cz: 'Czechy'
-        sk: 'Słowcja'
+        empty: Brak
+        pl: Polska
+        cz: Czechy
+        sk: Słowcja
     ui:
-        created_by: 'Utworzone przez'
-        services: 'Wykonawcy'
-        cities: 'Miasta'
-        abandoned: 'Porzucony'
-        about: 'O stronie'
-        accept: 'Akceptuję'
-        accepted: 'Zaakceptowany'
-        action: 'Akcja'
-        actions: 'Akcje'
-        add: 'Dodaj'
-        address: 'Adres'
-        admin_users: 'Użytkownicy'
-        administration: 'Administracja'
-        administration_dashboard: 'Panel administracyjny'
-        administration_panel_login: 'Logowanie do panelu administracyjnego'
-        all: 'Wszystko'
-        author: 'Autor'
-        average_rating: 'Ocena'
-        back: 'Wróć'
-        blocks: 'Bloki'
-        body: 'Zawartość'
-        build: 'Zbuduj'
-        bulk_actions: 'Masowe akcje'
-        by_position: 'Wg pozycji'
-        calculator: 'Kalkulator'
-        call_us: 'Zadzwoń do nas!'
-        cancel: 'Anuluj'
-        cancelled: 'Anulowane'
-        cart: 'Koszyk'
-        cart_locked: 'Koszyk zablokowany'
-        cart_summary: 'Podsumowanie koszyka'
-        categorization: 'Kategoria'
-        category: 'Kategoria'
-        change_password: 'Zmień hasło'
-        change_payment_method: 'Zmień metodę płatności'
-        change_position: 'Zmień położenie'
-        change_shipping_method: 'Zmień metodę wysyłki'
-        change_your_password: 'Zmiana hasła'
-        changes: 'Zmiany'
-        charges_and_taxes: 'Opłaty i podatki'
-        cheapest_first: 'Pierwszy najtańszy'
-        checkbox: 'Pole wyboru'
-        checking_out_as: 'Sprawdzanie jako'
-        checkout: 'Zamów'
-        choose_file: 'Wybierz plik'
-        city: 'Miejscowość'
-        clear: 'Wyczyść'
-        clear_cart: 'Wyczyść koszyk'
-        clear_filters: 'Wyczyść filtry'
-        code: 'Kod'
-        color: 'Kolor'
-        comment: 'Komentarz'
-        company: 'Firma'
-        complete: 'Zakończ'
-        completed: 'Zakończone'
-        configuration: 'Konfiguracja'
-        confirm_your_action: 'Potwierdź akcję'
-        confirmation: 'Potwierdzenie'
-        confirmation_title: 'Powtórz nowe hasło'
-        confirmed: 'Potwierdzony'
-        contains: 'Zawiera'
-        content: 'Treść'
-        countries: 'Kraje'
-        country: 'Kraj'
-        country_details: 'Szczegóły kraju'
-        coupon: 'Kupon'
-        coupon_based: 'Z wykorzystaniem kuponów'
-        coupons: 'Kupony'
-        create: 'Utwórz'
-        save_close: 'Zapisz i zamknij'
-        save_update: 'Zapisz i edytuj'
-        dashboard: 'Panel Systemu Ewidencji'
-        data: 'Dane'
-        date: 'Data'
-        datetime: 'Data i godzina'
-        delete: 'Usuń'
-        delete_image: 'Usuń zdjęcie'
-        deleted: 'Usunięto'
-        description: 'Opis'
-        details: 'Szczegóły'
-        disable: 'Wyłącz'
-        disabled: 'Nieaktywny'
-        display: 'Pokaż'
-        emails: 'Adresy email'
-        enable: 'Włącz'
-        equal: 'Równe'
-        error: 'Błąd'
-        filter: 'Filtruj'
-        filters: 'Filtry'
-        first_name: 'Imię'
-        forgot_password: 'Nie pamiętasz hasła?'
-        get_support: 'Pomoc'
-        go: 'Przejdź'
-        home: 'Panel'
-        in: 'W'
-        lastname: 'Nazwisko'
-        logged_at: 'Zalogowano o'
-        logged_in_as: 'Zalogowany jako %username%'
-        login: 'Zaloguj'
-        login_button: 'Zaloguj'
-        logout: 'Wyloguj'
-        male: 'Mężczyzna'
-        manage: 'Zarządzaj'
-        menu_nodes: 'Węzły menu'
-        menus: 'Menu'
-        my_account: 'Moje konto'
-        name: 'Nazwa'
-        new: 'Nowy'
-        next: 'Następne'
-        or: 'lub'
-        order: 'zamówienie'
-        page: 'Strona'
-        pages: 'Strony'
-        password: 'Hasło'
-        phone_number: 'Numer telefonu'
-        postcode: 'Kod pocztowy'
-        review_details: 'Szczegóły recenzji'
-        reviews: 'Recenzje'
-        roles: 'Role'
-        save: 'Zapisz'
-        save_changes: 'Zapisz zmiany'
-        search: 'Szukaj'
-        select: 'Wybierz'
-        send: 'Wyślij'
-        shop_by: 'Przeglądaj'
-        short_description: 'Krótki opis'
-        show: 'Pokaż'
-        show_all: 'Pokaż wszystko'
-        sign_in: 'Zaloguj'
-        sign_in_here: 'Zaloguj się tutaj'
-        sign_out: 'Wyloguj'
-        sort: 'Sortowanie:'
-        sort_by_date: 'Sortuj wg daty'
-        state: 'Status'
-        status: 'Status'
-        street: 'Adres'
-        subject: 'Temat'
-        success: 'Sukces'
-        sylius_logo: 'Sylius'
-        text: 'Tekst'
-        textarea: 'Pole tekstowe'
-        thank_you: 'Dziękujemy!'
-        title: 'Tytuł'
-        to: 'Do'
-        created_at: 'Data utworzenia'
-        show_service: 'Szczegóły wykonawcy'
-        nip: 'NIP'
-        post_code: 'Kod pocztowy'
-        mobile_phone: 'Telefon komórkowy'
-        landline_phone: 'Telefon stacjonarny'
-        permanent_contract_number: 'Numer umowy stałej'
-        contact_person: 'Osoba kontaktowa'
-        settlement_notes: 'Uwagi rozliczenia'
-        list_reviews: 'Lista recenzji'
-        review: 'Recenzja'
-        province: 'Województwo'
-        manage_cities_available_in_system: 'Zarządzaj miastami dostępnymi w systemie'
-        edit: 'Edytuj'
-        edit_city: 'Edycja miasta'
-        enabled: 'Aktywny'
-        edit_service: 'Edycja wykonawcy'
-        manage_services: 'Zarządzanie wykonawcami'
-        new_review: 'Nowa recenzja'
-        this_message_contains_errors: 'Ten formularz zawiera błędy.'
-        new_service: 'Nowy wykonawca'
-        search_location: 'Wyszukiwanie po lokalizacji'
-        distance_search: 'Odległość od miasta w km'
-        rbac_roles: 'Role'
-        manage_rbac_roles_available_in_system: 'Zarządzenie rolami dostępnymi w systemie'
-        rbac_permissions: 'Lista dostępów w systemie'
-        manage_permissions_in_system: 'Zarządzanie dostępami w systemie'
-        assign_permissions: 'Przypisz uprawnienia'
-        permissions_for_role: 'Dostępy dla roli'
-        manage_permissions_for_role: 'Zarządznie dostępami dla roli'
+        created_by: Copyright
+        services: Wykonawcy
+        cities: Miasta
+        abandoned: Porzucony
+        about: O stronie
+        accept: Akceptuję
+        accepted: Zaakceptowany
+        action: Akcja
+        actions: Akcje
+        add: Dodaj
+        address: Adres
+        admin_users: Użytkownicy
+        administration: Administracja
+        administration_dashboard: Panel administracyjny
+        administration_panel_login: Logowanie do panelu administracyjnego
+        all: Wszystko
+        author: Autor
+        average_rating: Ocena
+        back: Wróć
+        blocks: Bloki
+        body: Zawartość
+        build: Zbuduj
+        bulk_actions: Masowe akcje
+        by_position: Wg pozycji
+        calculator: Kalkulator
+        call_us: Zadzwoń do nas!
+        cancel: Anuluj
+        cancelled: Anulowane
+        cart: Koszyk
+        cart_locked: Koszyk zablokowany
+        cart_summary: Podsumowanie koszyka
+        categorization: Kategoria
+        category: Kategoria
+        change_password: Zmień hasło
+        change_payment_method: Zmień metodę płatności
+        change_position: Zmień położenie
+        change_shipping_method: Zmień metodę wysyłki
+        change_your_password: Zmiana hasła
+        changes: Zmiany
+        charges_and_taxes: Opłaty i podatki
+        cheapest_first: Pierwszy najtańszy
+        checkbox: Pole wyboru
+        checking_out_as: Sprawdzanie jako
+        checkout: Zamów
+        choose_file: Wybierz plik
+        city: Miejscowość
+        clear: Wyczyść
+        clear_cart: Wyczyść koszyk
+        clear_filters: Wyczyść filtry
+        code: Kod
+        color: Kolor
+        comment: Komentarz
+        company: Firma
+        complete: Zakończ
+        completed: Zakończone
+        configuration: Konfiguracja
+        confirm_your_action: Potwierdź akcję
+        confirmation: Potwierdzenie
+        confirmation_title: Powtórz nowe hasło
+        confirmed: Potwierdzony
+        contains: Zawiera
+        content: Treść
+        countries: Kraje
+        country: Kraj
+        country_details: Szczegóły kraju
+        create: Utwórz
+        save_close: Zapisz i zamknij
+        save_update: Zapisz i edytuj
+        dashboard: Panel systemu ewidencji wyposażenia
+        data: Dane
+        date: Data
+        datetime: Data i godzina
+        delete: Usuń
+        delete_image: Usuń zdjęcie
+        deleted: Usunięto
+        description: Opis
+        details: Szczegóły
+        disable: Wyłącz
+        disabled: Nieaktywny
+        display: Pokaż
+        emails: Adresy email
+        enable: Włącz
+        equal: Równe
+        error: Błąd
+        filter: Filtruj
+        filters: Filtry
+        first_name: Imię
+        forgot_password: Nie pamiętasz hasła?
+        get_support: Pomoc
+        go: Przejdź
+        home: Panel
+        in: W
+        lastname: Nazwisko
+        logged_at: Zalogowano o
+        logged_in_as: Zalogowany jako %username%
+        login: Zaloguj
+        login_button: Zaloguj
+        logout: Wyloguj
+        male: Mężczyzna
+        manage: Zarządzaj
+        menu_nodes: Węzły menu
+        menus: Menu
+        my_account: Moje konto
+        name: Nazwa
+        new: Nowy
+        next: Następne
+        or: lub
+        order: zamówienie
+        page: Strona
+        pages: Strony
+        password: Hasło
+        phone_number: Numer telefonu
+        postcode: Kod pocztowy
+        review_details: Szczegóły recenzji
+        reviews: Recenzje
+        roles: Role
+        save: Zapisz
+        save_changes: Zapisz zmiany
+        search: Szukaj
+        select: Wybierz
+        send: Wyślij
+        shop_by: Przeglądaj
+        short_description: Krótki opis
+        show: Pokaż
+        show_all: Pokaż wszystko
+        sign_in: Zaloguj
+        sign_in_here: Zaloguj się tutaj
+        sign_out: Wyloguj
+        sort: Sortowanie
+        sort_by_date: Sortuj wg daty
+        state: Status
+        status: Status
+        street: Adres
+        subject: Temat
+        success: Sukces
+        text: Tekst
+        textarea: Pole tekstowe
+        thank_you: Dziękujemy!
+        title: Tytuł
+        to: Do
+        created_at: Data utworzenia
+        show_service: Szczegóły wykonawcy
+        nip: NIP
+        post_code: Kod pocztowy
+        mobile_phone: Telefon komórkowy
+        landline_phone: Telefon stacjonarny
+        permanent_contract_number: Numer umowy stałej
+        contact_person: Osoba kontaktowa
+        settlement_notes: Uwagi rozliczenia
+        list_reviews: Lista recenzji
+        review: Recenzja
+        province: Województwo
+        manage_cities_available_in_system: Zarządzaj miastami dostępnymi w systemie
+        edit: Edytuj
+        edit_city: Edycja miasta
+        enabled: Aktywny
+        edit_service: Edycja wykonawcy
+        manage_services: Zarządzanie wykonawcami
+        new_review: Nowa recenzja
+        this_message_contains_errors: Ten formularz zawiera błędy.
+        new_service: Nowy wykonawca
+        search_location: Wyszukiwanie po lokalizacji
+        distance_search: Odległość od miasta w km
+        rbac_roles: Role
+        manage_rbac_roles_available_in_system: Zarządzenie rolami dostępnymi w systemie
+        rbac_permissions: Lista dostępów w systemie
+        manage_permissions_in_system: Zarządzanie dostępami w systemie
+        assign_permissions: Przypisz uprawnienia
+        permissions_for_role: Dostępy dla roli
+        manage_permissions_for_role: Zarządznie dostępami dla roli
         admin_user_permissions: Dostępy użytkownika
         manage_user_permissions: Zarządzenie dostępami użytkownika
         assign_permission_to_role: Przypisywanie dostępów do roli
@@ -300,12 +323,16 @@ owl:
         change_status: Zmień status
         history_suggestion_status: Historia statusów sugestii
         history_status: Historia statusów
-        general_info: 'Informacje ogólne'
-        additional_information: 'Dodatkowe informacje'
-        preferences: 'Preferencje'
+        general_info: Informacje ogólne
+        additional_information: Dodatkowe informacje
+        preferences: Preferencje
         new_admin_user: Dodawanie nowego użytkownika
-        edit_admin_user: 'Edytuj użytkownika'
-        are_your_sure_you_want_to_perform_this_action: 'Czy na pewno chcesz wykonać tę akcję?'
+        edit_admin_user: Edytuj użytkownika
+        knowledge_bases: Baza wiedzy
+        create_knowledge_base: Dodawanie wpisu do bazy wiedzy
+        edit_knowledge_base: Edycja wpisu do bazy wiedzy
+        manage_knowledge_bases: Zarządzenie wpisami w bazie wiedzy
+        are_your_sure_you_want_to_perform_this_action: Czy na pewno chcesz wykonać tę akcję?
         no_label: Nie
         yes_label: Tak
         info: Info
@@ -354,6 +381,7 @@ owl:
         old_version_excel: Starsza wersja excel'a (xls 2003)
         new_version_excel: Nowa wersja excel'a (xlsx)
         data_location: Dane lokalizacji
+        data_equipment: Dane wyposażenia
         no_value: Brak wartości
         sum: Suma
         location_categories: Kategorie lokalizacji
@@ -384,13 +412,15 @@ owl:
         create_notification: Dodawanie komunikatu
         edit_notification: Edycja komunikatu
         edit_notification_file: Edycja pliku
+        show_notification: Szczegóły komunikatu
         to_all: do wszystkich
         notification_group_assigned_role_admin_company: do administratorów firmy
         notification_group_assigned_role_user: do użytkowników
         details_notification_of_the_day: Szczegóły komunikatu z dnia
+        confirmation_history: Historia potwierdzeń
         reset_password: Resetuj hasło
         set_a_new_password_for_your_account: Ustaw nowe hasło dla swojego konta
-        reset_button: 'Zresetuj'
+        reset_button: Zresetuj
         system_settings: Ustawienia systemu
         manage_settings_available_in_system: Zarządzanie ustawieniami dostępnymi w systemie
         register: Zarejestruj się
@@ -401,7 +431,7 @@ owl:
         personal_information: Dane osobowe
         create_an_account: Utwórz konto
         company_inforamtion: Dane firmy
-        welcome_to_our_system: 'Zapraszamy do naszego systemu'
+        welcome_to_our_system: Zapraszamy do naszego systemu
         registration: Rejestracja
         date_verified_email: Data weryfikacji e-mail przez użytkownika
         user_has_not_verified_email: Użytkownik nie zweryfikował adresu e-mail
@@ -431,21 +461,105 @@ owl:
         attributes: Atrybuty
         add_attributes: Dodaj atrybuty
         no_attributes: Brak atrybutów
-        event_equipment: Zdarzenia do wyposażenia
+        equipment_events: Zdarzenia do wyposażenia
+        equipment_events_transport: Zdarzenia transportu do wyposażenia
         refueling_equipment: Tankowania
         equipment_data: Dane wyposażenia
         actual_name_equipment: Aktualna nazwa wyposażenia
         old_name_equipment: Stara nazwa wyposażenia
-        mileage_equipment: Przebieg w km
+        mileage_equipment: Stan licznika km
         quantity_equipment: Ilość litrów
         value_equipment: Wartość
         list_refuelings: Lista tankowań
         manage_refueling: Zarządzanie tankowaniami
         create_refueling: Dodawanie tankowania
+        update_refueling: Edycja tankowania
         manage_events: Zarządzanie zdarzeniami
+        manage_events_transport: Zarządzanie zdarzeniami transportu
         list_events: Lista zdarzeń
         create_event: Dodawanie zdarzenia
+        update_event: Edycja zdarzenia
         date_refueling: Data tankowania
         date_event: Data zdarzenia
         date_notify: Data przypomnienia
+        edit_equipment_event_file: Edycja pliku do zdarzenia wyposażenia 
+        accepted_at: Data zaakceptowania
+        last_login: Data ostatniego logowania
+        show_dashboard: Widok opisu do strony głównej
+        user_history_action: Historia akcji
+        history_action_section: Sekcja/moduł
+        history_action_route_name: Akcja
+        history_route_module:
+            home: Strona główna
+            user: Użytkownicy
+            company: Firmy
+            location: Lokalizacje
+            suggestion: Sugestie
+            mailbox: Poczta
+            notification: Komunikaty
+            knowledge_base: Baza wiedzy
+            equipment: Wyposażenie
+            equipment_attribute: Atrybuty wyposażenia
+            locale: Języki
+            system_setting: Ustawienia
+            rbac_permission_role: Role
+            rbac_permission_availables: Dostępne role w systemie
+        refueling_additional_purchase: Zakup dodatkowy
+        refueling_data: Dane do tankowania
+        refueling_comment: Uwagi
+        refueling_place: Miejsce
+        refueling_additional_purchase_value: Wartość zakupów
+        refueling_additional_purchase_desc: Opis zakupów
+        stats: Analizy
+        stats_available_in_system: Analizy dostępne w systemie
+        no_assortments: Brak wyposażenia
+        attribute: Atrybut
+        button_add_attribute_label: Dodaj atrybut
+        filter_by_attributes: Filtrowanie po atrybutach
+        attribute_filter:
+            text_type: Rodzaj filtrowania tekstu
+            integer_type: Rodzaj filtrowania liczby
+            percent_type: Rodzaj filtrowania procentu
+            date_type: Rodzaj filtrowania daty
+            select_type: Wybierz pozycje do filtrowania
+        choice_attribute: - wybierz atrybut -
+        greater: Większe
+        greater_equal: Większe lub równe
+        less: Mniejsze
+        less_equal: Mniejsze lub równe
+        date_label: Data
+        time_label: Godzina
+        equipment_addon:
+            refueling_name: Tankowanie
+            event_name: Zdarzenia
+            transport_event_name: Zdarzenia do transportu
+        equipment_event_type:
+            review: Przegląd
+            repair: Naprawa
+            insurance: Ubezpiczenie
+            other: Inne
+            tires: Opony
+            road_event: Zdarzenie drogowe
+            decommissioned: Wycofany z użytkowania
+        value: Wartość
+        event_type: Rodzaj zdarzenia
+        place_event: Miejsce zdarzenia
+        mileage_status: Stan KM
+        edit_equipment_file: Edycja pliku do wyposażenia
+        report:
+            count_equipment_by_category: Ilości wyposażenia wg kategorii
+            refueling_by_user: Tankowania po użytkowniku - suma
+            refueling_by_user_list: Tankowania po użytkowniku - lista
+            equipment_event_by_user_list: Zdarzenia wyposażenia po użytkowniku - lista
+            last_login_user: Raport logowań użytkowników do systemu
+            refueling_by_company: Tankowania po firmie - suma
+        generate_report: Wygeneruj raport
+        equipment_transport_events: Zdarzenia transportu do wyposażenia
+        user_profile: Profil
+        update_profile: Aktualizacja profilu
+        your_profile: Mój profil
+        edit_your_personal_information: Edycja moich danych
+        add_suggestion: Dodaj sugestię
+        assigned_mailboxes: Skrzynki pocztowe
+        lang: Język
 
