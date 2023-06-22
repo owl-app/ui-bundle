@@ -321,7 +321,6 @@ owl:
         location: Location
         categories: Categories
         comments: Comments
-        history_equipment: History equipment
         history_location: History location
         equipment_categories: Equipment categories
         manage_equipment_category: Manage equipment category

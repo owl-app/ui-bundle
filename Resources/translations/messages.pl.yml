@@ -370,7 +370,6 @@ owl:
         location: Lokalizacja
         categories: Kategorie
         comments: Uwagi
-        history_equipment: Historia wyposażenia
         history_location: Historia lokalizacji
         equipment_categories: Kategorie wyposażenia
         manage_equipment_category: Zarządanie kategoriami do wyposażenia
