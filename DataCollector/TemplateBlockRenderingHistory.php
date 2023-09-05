@@ -59,6 +59,11 @@ final class TemplateBlockRenderingHistory
         $this->renderedEvents[] = $currentlyRenderedEvent;
     }
 
+    /**
+     * @return ((TemplateBlock|float)[][]|float|string)[][]
+     *
+     * @psalm-return list<array{blocks: list<array{definition: Owl\Bundle\UiBundle\Registry\TemplateBlock, start: float, stop: float, time: float}>, name: string, start: float, stop: float, time: float}>
+     */
     public function getRenderedEvents(): array
     {
         return $this->renderedEvents;

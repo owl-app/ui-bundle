@@ -37,6 +37,11 @@ final class SecurityLoginType extends AbstractType
         ;
     }
 
+    /**
+     * @return string
+     *
+     * @psalm-return 'sylius_security_login'
+     */
     public function getBlockPrefix(): string
     {
         return 'sylius_security_login';

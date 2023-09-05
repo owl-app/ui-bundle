@@ -28,12 +28,19 @@ final class TestFormAttributeExtension extends AbstractExtension
 
     /**
      * @return TwigFunction[]
+     *
+     * @psalm-return list{TwigFunction}
      */
     public function getFunctions(): array
     {
         return [
             new TwigFunction(
                 'sylius_test_form_attribute',
+                /**
+                 * @return string[][]
+                 *
+                 * @psalm-return array{attr?: array<string, string>}
+                 */
                 function (string $name, ?string $value = null): array {
                     if (strpos($this->environment, 'test') === 0) {
                         return ['attr' => ['data-test-' . $name => (string) $value]];

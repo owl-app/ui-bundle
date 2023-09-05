@@ -18,6 +18,11 @@ use Twig\TwigFilter;
 
 final class MergeRecursiveExtension extends AbstractExtension
 {
+    /**
+     * @return TwigFilter[]
+     *
+     * @psalm-return list{TwigFilter}
+     */
     public function getFilters(): array
     {
         return [

@@ -40,7 +40,12 @@ final class Configuration implements ConfigurationInterface
                                     ->canBeDisabled()
                                     ->beforeNormalization()
                                         ->ifString()
-                                        ->then(static function (?string $template): array {
+                                        ->then(/**
+                                         * @return (null|string)[]
+                                         *
+                                         * @psalm-return array{template: null|string}
+                                         */
+                                        static function (?string $template): array {
                                             return ['template' => $template];
                                         })
                                     ->end()

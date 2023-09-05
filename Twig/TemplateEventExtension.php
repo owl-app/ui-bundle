@@ -30,6 +30,11 @@ final class TemplateEventExtension extends AbstractExtension
         $this->templateEventRenderer = $templateEventRenderer;
     }
 
+    /**
+     * @return TwigFunction[]
+     *
+     * @psalm-return list{TwigFunction}
+     */
     public function getFunctions(): array
     {
         return [

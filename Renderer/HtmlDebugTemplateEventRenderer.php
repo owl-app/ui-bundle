@@ -33,6 +33,9 @@ final class HtmlDebugTemplateEventRenderer implements TemplateEventRendererInter
         $this->templateBlockRegistry = $templateBlockRegistry;
     }
 
+    /**
+     * @return string
+     */
     public function render(array $eventNames, array $context = []): string
     {
         $shouldRenderHtmlDebug = $this->shouldRenderHtmlDebug($this->templateBlockRegistry->findEnabledForEvents($eventNames));

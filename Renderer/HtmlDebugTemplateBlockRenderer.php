@@ -28,6 +28,9 @@ final class HtmlDebugTemplateBlockRenderer implements TemplateBlockRendererInter
         $this->templateBlockRenderer = $templateBlockRenderer;
     }
 
+    /**
+     * @return string
+     */
     public function render(TemplateBlock $templateBlock, array $context = []): string
     {
         $shouldRenderHtmlDebug = strrpos($templateBlock->getTemplate(), '.html.twig') !== false;

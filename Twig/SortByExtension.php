@@ -20,6 +20,11 @@ use Twig\TwigFilter;
 
 class SortByExtension extends AbstractExtension
 {
+    /**
+     * @return TwigFilter[]
+     *
+     * @psalm-return list{TwigFilter}
+     */
     public function getFilters(): array
     {
         return [
@@ -29,6 +34,8 @@ class SortByExtension extends AbstractExtension
 
     /**
      * @throws NoSuchPropertyException
+     *
+     * @psalm-return list<mixed>
      */
     public function sortBy(iterable $iterable, string $field, string $order = 'ASC'): array
     {

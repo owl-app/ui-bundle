@@ -46,6 +46,9 @@ final class DebugTemplateEventCommand extends Command
         ;
     }
 
+    /**
+     * @return int
+     */
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
         $io = new SymfonyStyle($input, $output);
@@ -64,6 +67,11 @@ final class DebugTemplateEventCommand extends Command
         $io->table(
             ['Block name', 'Template', 'Priority', 'Enabled'],
             array_map(
+                /**
+                 * @return (int|string)[]
+                 *
+                 * @psalm-return list{string, string, int, 'FALSE'|'TRUE'}
+                 */
                 static function (TemplateBlock $templateBlock): array {
                     return [
                         $templateBlock->getName(),

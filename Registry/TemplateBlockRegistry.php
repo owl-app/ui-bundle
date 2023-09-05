@@ -69,9 +69,12 @@ final class TemplateBlockRegistry implements TemplateBlockRegistryInterface
 
     /**
      * @param string[] $eventNames
+     *
      * @psalm-param non-empty-list<string> $eventNames
      *
      * @return TemplateBlock[]
+     *
+     * @psalm-return array<string, TemplateBlock>
      */
     private function findFinalizedForEvents(array $eventNames): array
     {

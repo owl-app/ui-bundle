@@ -42,14 +42,23 @@ final class TemplateBlockDataCollector extends DataCollector
         return $this->data['renderedEvents'];
     }
 
+    /**
+     * @psalm-return int<0, max>
+     */
     public function getNumberOfRenderedEvents(): int
     {
         return count($this->data['renderedEvents']);
     }
 
+    /**
+     * @psalm-return int<min, max>
+     */
     public function getNumberOfRenderedBlocks(): int
     {
-        return array_reduce($this->data['renderedEvents'], static function (int $accumulator, array $event): int {
+        return array_reduce($this->data['renderedEvents'], /**
+         * @psalm-return int<min, max>
+         */
+        static function (int $accumulator, array $event): int {
             return $accumulator + count($event['blocks']);
         }, 0);
     }
@@ -61,6 +70,11 @@ final class TemplateBlockDataCollector extends DataCollector
         }, 0.0);
     }
 
+    /**
+     * @return string
+     *
+     * @psalm-return 'sylius_ui.template_block'
+     */
     public function getName(): string
     {
         return 'sylius_ui.template_block';

@@ -28,6 +28,8 @@ final class TestHtmlAttributeExtension extends AbstractExtension
 
     /**
      * @return TwigFunction[]
+     *
+     * @psalm-return list{TwigFunction}
      */
     public function getFunctions(): array
     {

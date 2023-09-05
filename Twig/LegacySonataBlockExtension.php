@@ -30,6 +30,11 @@ final class LegacySonataBlockExtension extends AbstractExtension
         $this->whitelistedVariables = $whitelistedVariables;
     }
 
+    /**
+     * @return TwigFunction[]
+     *
+     * @psalm-return list{TwigFunction}
+     */
     public function getFunctions(): array
     {
         return [
