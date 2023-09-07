@@ -3,7 +3,7 @@
 /*
  * This file is part of the Sylius package.
  *
- * (c) Paweł Jędrzejewski
+ * (c) Sylius Sp. z o.o.
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -15,20 +15,17 @@ namespace Owl\Bundle\UiBundle\DataCollector;
 
 use Owl\Bundle\UiBundle\Registry\TemplateBlock;
 
-/**
- * @internal
- * @experimental
- */
+/** @internal */
 final class TemplateBlockRenderingHistory
 {
     /** @psalm-var list<array{name: string, start: float, stop: float, time: float, blocks: list<array{definition: TemplateBlock, start: float, stop: float, time: float}>}> */
     private $renderedEvents = [];
 
     /** @psalm-var list<array{name: string, start: float, stop?: float, time?: float, blocks: list<array{definition: TemplateBlock, start: float, stop: float, time: float}>}> */
-    private $currentlyRenderedEvents = [];
+    private array $currentlyRenderedEvents = [];
 
     /** @psalm-var list<array{definition: TemplateBlock, start: float, stop?: float, time?: float}> */
-    private $currentlyRenderedBlocks = [];
+    private array $currentlyRenderedBlocks = [];
 
     public function startRenderingEvent(array $eventNames, array $context): void
     {
@@ -59,11 +56,6 @@ final class TemplateBlockRenderingHistory
         $this->renderedEvents[] = $currentlyRenderedEvent;
     }
 
-    /**
-     * @return ((TemplateBlock|float)[][]|float|string)[][]
-     *
-     * @psalm-return list<array{blocks: list<array{definition: Owl\Bundle\UiBundle\Registry\TemplateBlock, start: float, stop: float, time: float}>, name: string, start: float, stop: float, time: float}>
-     */
     public function getRenderedEvents(): array
     {
         return $this->renderedEvents;

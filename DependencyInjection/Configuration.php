@@ -28,34 +28,40 @@ final class Configuration implements ConfigurationInterface
         $rootNode
             ->fixXmlConfig('event')
             ->children()
-                ->arrayNode('events')
-                    ->useAttributeAsKey('event_name')
-                    ->arrayPrototype()
-                        ->fixXmlConfig('block')
-                        ->children()
-                            ->arrayNode('blocks')
-                                ->defaultValue([])
-                                ->useAttributeAsKey('block_name')
-                                ->arrayPrototype()
-                                    ->canBeDisabled()
-                                    ->beforeNormalization()
-                                        ->ifString()
-                                        ->then(/**
-                                         * @return (null|string)[]
-                                         *
-                                         * @psalm-return array{template: null|string}
-                                         */
-                                        static function (?string $template): array {
-                                            return ['template' => $template];
-                                        })
-                                    ->end()
-                                    ->children()
-                                        ->booleanNode('enabled')->defaultNull()->end()
-                                        ->arrayNode('context')->addDefaultsIfNotSet()->ignoreExtraKeys(false)->end()
-                                        ->scalarNode('template')->defaultNull()->end()
-                                        ->integerNode('priority')->defaultNull()->end()
+                ->append($this->getEventsDefinition())
         ;
 
         return $treeBuilder;
+    }
+
+    protected function getEventsDefinition(): ArrayNodeDefinition
+    {
+        $builder = new TreeBuilder('events');
+        /** @var ArrayNodeDefinition $eventsNode */
+        $eventsNode = $builder->getRootNode();
+
+        $eventsNode
+            ->useAttributeAsKey('event_name')
+            ->arrayPrototype()
+                ->fixXmlConfig('block')
+                ->children()
+                    ->arrayNode('blocks')
+                        ->defaultValue([])
+                        ->useAttributeAsKey('block_name')
+                        ->arrayPrototype()
+                            ->canBeDisabled()
+                            ->children()
+                                ->booleanNode('enabled')->defaultNull()->end()
+                                ->arrayNode('context')->addDefaultsIfNotSet()->ignoreExtraKeys(false)->end()
+                                ->scalarNode('template')->defaultNull()->end()
+                                ->integerNode('priority')->defaultNull()->end()
+                            ->end()
+                            ->beforeNormalization()
+                                ->ifString()
+                                ->then(static fn (?string $template): array => ['template' => $template])
+                            ->end()
+        ;
+
+        return $eventsNode;
     }
 }
