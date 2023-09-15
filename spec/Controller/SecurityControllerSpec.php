@@ -33,7 +33,7 @@ final class SecurityControllerSpec extends ObjectBehavior
         FormFactoryInterface $formFactory,
         Environment $templatingEngine,
         AuthorizationCheckerInterface $authorizationChecker,
-        RouterInterface $router
+        RouterInterface $router,
     ): void {
         $this->beConstructedWith($authenticationUtils, $formFactory, $templatingEngine, $authorizationChecker, $router);
     }
@@ -47,7 +47,7 @@ final class SecurityControllerSpec extends ObjectBehavior
         FormView $formView,
         Environment $templatingEngine,
         AuthorizationCheckerInterface $authorizationChecker,
-        Response $response
+        Response $response,
     ): void {
         $authorizationChecker->isGranted('IS_AUTHENTICATED_FULLY')->willReturn(false);
 
@@ -79,7 +79,7 @@ final class SecurityControllerSpec extends ObjectBehavior
         Request $request,
         ParameterBag $requestAttributes,
         AuthorizationCheckerInterface $authorizationChecker,
-        RouterInterface $router
+        RouterInterface $router,
     ): void {
         $request->attributes = $requestAttributes;
         $requestAttributes->get('_sylius')->willReturn(['logged_in_route' => 'foo_bar']);

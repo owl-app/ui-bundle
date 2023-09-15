@@ -48,7 +48,7 @@ final class TestFormAttributeExtension extends AbstractExtension
 
                     return [];
                 },
-                ['is_safe' => ['html']]
+                ['is_safe' => ['html']],
             ),
         ];
     }

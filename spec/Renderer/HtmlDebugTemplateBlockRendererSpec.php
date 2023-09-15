@@ -13,10 +13,10 @@ declare(strict_types=1);
 
 namespace spec\Owl\Bundle\UiBundle\Renderer;
 
-use PhpSpec\ObjectBehavior;
-use Prophecy\Argument;
 use Owl\Bundle\UiBundle\Registry\TemplateBlock;
 use Owl\Bundle\UiBundle\Renderer\TemplateBlockRendererInterface;
+use PhpSpec\ObjectBehavior;
+use Prophecy\Argument;
 
 final class HtmlDebugTemplateBlockRendererSpec extends ObjectBehavior
 {
@@ -31,28 +31,28 @@ final class HtmlDebugTemplateBlockRendererSpec extends ObjectBehavior
     }
 
     public function it_renders_html_debug_comment_prepending_the_block_if_rendering_html_template(
-        TemplateBlockRendererInterface $templateBlockRenderer
+        TemplateBlockRendererInterface $templateBlockRenderer,
     ): void {
         $templateBlockRenderer->render(Argument::cetera())->willReturn('Block content');
 
         $this->render(
             new TemplateBlock('block_name', 'event_name', 'block.html.twig', [], 0, true),
-            ['foo' => 'bar']
+            ['foo' => 'bar'],
         )->shouldReturn(
             '<!-- BEGIN BLOCK | event name: "event_name", block name: "block_name", template: "block.html.twig", priority: 0 -->' . "\n" .
             'Block content' . "\n" .
-            '<!-- END BLOCK | event name: "event_name", block name: "block_name" -->'
+            '<!-- END BLOCK | event name: "event_name", block name: "block_name" -->',
         );
     }
 
     public function it_does_not_render_html_debug_comment_prepending_the_block_if_rendering_non_html_template(
-        TemplateBlockRendererInterface $templateBlockRenderer
+        TemplateBlockRendererInterface $templateBlockRenderer,
     ): void {
         $templateBlockRenderer->render(Argument::cetera())->willReturn('Block content');
 
         $this->render(
             new TemplateBlock('block_name', 'event_name', 'block.txt.twig', [], 0, true),
-            ['foo' => 'bar']
+            ['foo' => 'bar'],
         )->shouldReturn('Block content');
     }
 }

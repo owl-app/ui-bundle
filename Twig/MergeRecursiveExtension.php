@@ -30,7 +30,7 @@ final class MergeRecursiveExtension extends AbstractExtension
                 'sylius_merge_recursive',
                 function (array $firstArray, array $secondArray): array {
                     return array_merge_recursive($firstArray, $secondArray);
-                }
+                },
             ),
         ];
     }

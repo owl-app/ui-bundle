@@ -13,9 +13,9 @@ declare(strict_types=1);
 
 namespace spec\Owl\Bundle\UiBundle\Renderer;
 
-use PhpSpec\ObjectBehavior;
 use Owl\Bundle\UiBundle\Registry\TemplateBlock;
 use Owl\Bundle\UiBundle\Renderer\TemplateBlockRendererInterface;
+use PhpSpec\ObjectBehavior;
 use Twig\Environment;
 
 final class TwigTemplateBlockRendererSpec extends ObjectBehavior
@@ -36,7 +36,7 @@ final class TwigTemplateBlockRendererSpec extends ObjectBehavior
 
         $this->render(
             new TemplateBlock('block_name', 'event_name', 'block.txt.twig', [], 0, true),
-            ['foo' => 'bar']
+            ['foo' => 'bar'],
         )->shouldReturn('Block content');
     }
 
@@ -46,7 +46,7 @@ final class TwigTemplateBlockRendererSpec extends ObjectBehavior
 
         $this->render(
             new TemplateBlock('block_name', 'event_name', 'block.txt.twig', ['sample' => 'Hi', 'switch' => true], 0, true),
-            ['sample' => 'Hello']
+            ['sample' => 'Hello'],
         )->shouldReturn('Block content');
     }
 }

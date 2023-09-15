@@ -17,6 +17,7 @@ use Owl\Bundle\UiBundle\Renderer\TemplateEventRendererInterface;
 
 /**
  * @internal
+ *
  * @experimental
  */
 final class TraceableTemplateEventRenderer implements TemplateEventRendererInterface

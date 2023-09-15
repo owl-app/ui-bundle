@@ -59,7 +59,7 @@ class SortByExtension extends AbstractExtension
                 }
 
                 return $result;
-            }
+            },
         );
 
         return $array;

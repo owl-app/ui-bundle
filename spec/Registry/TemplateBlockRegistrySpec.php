@@ -13,9 +13,9 @@ declare(strict_types=1);
 
 namespace spec\Owl\Bundle\UiBundle\Registry;
 
-use PhpSpec\ObjectBehavior;
 use Owl\Bundle\UiBundle\Registry\TemplateBlock;
 use Owl\Bundle\UiBundle\Registry\TemplateBlockRegistryInterface;
+use PhpSpec\ObjectBehavior;
 
 final class TemplateBlockRegistrySpec extends ObjectBehavior
 {

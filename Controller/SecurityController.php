@@ -14,7 +14,6 @@ declare(strict_types=1);
 namespace Owl\Bundle\UiBundle\Controller;
 
 use Owl\Bundle\UiBundle\Form\Type\SecurityLoginType;
-use Symfony\Bundle\FrameworkBundle\Templating\EngineInterface;
 use Symfony\Component\Form\FormFactoryInterface;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
@@ -31,7 +30,7 @@ final class SecurityController
         private FormFactoryInterface $formFactory,
         private Environment $templatingEngine,
         private AuthorizationCheckerInterface $authorizationChecker,
-        private RouterInterface $router
+        private RouterInterface $router,
     ) {
         $this->authenticationUtils = $authenticationUtils;
         $this->formFactory = $formFactory;

@@ -34,7 +34,7 @@ final class Configuration implements ConfigurationInterface
         return $treeBuilder;
     }
 
-    protected function getEventsDefinition(): ArrayNodeDefinition
+    private function getEventsDefinition(): ArrayNodeDefinition
     {
         $builder = new TreeBuilder('events');
         /** @var ArrayNodeDefinition $eventsNode */

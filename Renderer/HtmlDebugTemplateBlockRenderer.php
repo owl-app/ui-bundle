@@ -28,9 +28,6 @@ final class HtmlDebugTemplateBlockRenderer implements TemplateBlockRendererInter
         $this->templateBlockRenderer = $templateBlockRenderer;
     }
 
-    /**
-     * @return string
-     */
     public function render(TemplateBlock $templateBlock, array $context = []): string
     {
         $shouldRenderHtmlDebug = strrpos($templateBlock->getTemplate(), '.html.twig') !== false;
@@ -43,7 +40,7 @@ final class HtmlDebugTemplateBlockRenderer implements TemplateBlockRendererInter
                 $templateBlock->getEventName(),
                 $templateBlock->getName(),
                 $templateBlock->getTemplate(),
-                $templateBlock->getPriority()
+                $templateBlock->getPriority(),
             );
         }
 
@@ -53,7 +50,7 @@ final class HtmlDebugTemplateBlockRenderer implements TemplateBlockRendererInter
             $renderedParts[] = sprintf(
                 '<!-- END BLOCK | event name: "%s", block name: "%s" -->',
                 $templateBlock->getEventName(),
-                $templateBlock->getName()
+                $templateBlock->getName(),
             );
         }
 

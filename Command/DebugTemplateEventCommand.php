@@ -46,9 +46,6 @@ final class DebugTemplateEventCommand extends Command
         ;
     }
 
-    /**
-     * @return int
-     */
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
         $io = new SymfonyStyle($input, $output);
@@ -80,8 +77,8 @@ final class DebugTemplateEventCommand extends Command
                         $templateBlock->isEnabled() ? 'TRUE' : 'FALSE',
                     ];
                 },
-                $this->templateBlockRegistry->all()[$eventName] ?? []
-            )
+                $this->templateBlockRegistry->all()[$eventName] ?? [],
+            ),
         );
 
         return 0;

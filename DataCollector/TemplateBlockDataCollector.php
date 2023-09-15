@@ -19,6 +19,7 @@ use Symfony\Component\HttpKernel\DataCollector\DataCollector;
 
 /**
  * @internal
+ *
  * @experimental
  */
 final class TemplateBlockDataCollector extends DataCollector
@@ -58,9 +59,9 @@ final class TemplateBlockDataCollector extends DataCollector
         return array_reduce($this->data['renderedEvents'], /**
          * @psalm-return int<min, max>
          */
-        static function (int $accumulator, array $event): int {
-            return $accumulator + count($event['blocks']);
-        }, 0);
+            static function (int $accumulator, array $event): int {
+                return $accumulator + count($event['blocks']);
+            }, 0);
     }
 
     public function getTotalDuration(): float
@@ -71,8 +72,6 @@ final class TemplateBlockDataCollector extends DataCollector
     }
 
     /**
-     * @return string
-     *
      * @psalm-return 'sylius_ui.template_block'
      */
     public function getName(): string

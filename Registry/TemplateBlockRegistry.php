@@ -15,15 +15,13 @@ namespace Owl\Bundle\UiBundle\Registry;
 
 use Laminas\Stdlib\SplPriorityQueue;
 
-/**
- * @experimental
- */
 final class TemplateBlockRegistry implements TemplateBlockRegistryInterface
 {
     /**
      * Blocks within an event should be sorted by their priority descending.
      *
      * @var TemplateBlock[][]
+     *
      * @psalm-var array<string, array<string, TemplateBlock>>
      */
     private $eventsToTemplateBlocks;
@@ -48,7 +46,7 @@ final class TemplateBlockRegistry implements TemplateBlockRegistryInterface
                 $this->eventsToTemplateBlocks[$eventName] ?? [],
                 static function (TemplateBlock $templateBlock): bool {
                     return $templateBlock->isEnabled();
-                }
+                },
             ));
         }
 
@@ -56,7 +54,7 @@ final class TemplateBlockRegistry implements TemplateBlockRegistryInterface
             $this->findFinalizedForEvents($eventNames),
             static function (TemplateBlock $templateBlock): bool {
                 return $templateBlock->isEnabled();
-            }
+            },
         );
 
         $templateBlocksPriorityQueue = new SplPriorityQueue();
@@ -73,13 +71,12 @@ final class TemplateBlockRegistry implements TemplateBlockRegistryInterface
      * @psalm-param non-empty-list<string> $eventNames
      *
      * @return TemplateBlock[]
-     *
-     * @psalm-return array<string, TemplateBlock>
      */
     private function findFinalizedForEvents(array $eventNames): array
     {
         /**
-         * @var TemplateBlock[]
+         * @var TemplateBlock[] $finalizedTemplateBlocks
+         *
          * @psalm-var array<string, TemplateBlock> $finalizedTemplateBlocks
          */
         $finalizedTemplateBlocks = [];

@@ -13,8 +13,8 @@ declare(strict_types=1);
 
 namespace spec\Owl\Bundle\UiBundle\Registry;
 
-use PhpSpec\ObjectBehavior;
 use Owl\Bundle\UiBundle\Registry\TemplateBlock;
+use PhpSpec\ObjectBehavior;
 
 final class TemplateBlockSpec extends ObjectBehavior
 {
