@@ -125,6 +125,7 @@ owl:
         equipment_attribute:
             position: Position
     ui:
+        toggle_sidebar: Toggle sidebar
         created_by: Copyright
         accept: Accept
         accepted: Accepted

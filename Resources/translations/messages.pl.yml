@@ -131,6 +131,7 @@ owl:
         cz: Czechy
         sk: Słowcja
     ui:
+        toggle_sidebar: Przełącz pasek boczny
         created_by: Copyright
         services: Wykonawcy
         cities: Miasta
