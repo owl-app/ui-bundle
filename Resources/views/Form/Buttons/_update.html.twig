@@ -6,7 +6,7 @@
         {% set text = 'owl.form.actions.' ~ action.name %}
     {% endif %}
 
-    <button class="ui labeled icon {{ action.color|default('primary') }} button save-action" type="submit" name="save_action" value="{{ action.name  }}">
+    <button class="ui labeled icon {{ action.color|default('primary') }} button save-action save-action-{{ action.name }}" type="submit" name="save_action" value="{{ action.name  }}">
         <i class="{{ action.icon }} icon"></i>{{- (text)|trans -}}
     </button>
 {% endfor %}
