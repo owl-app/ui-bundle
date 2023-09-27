@@ -199,8 +199,8 @@ owl:
         lastname: Last name
         logged_at: Logged in at
         logged_in_as: Logged in as %username%
-        login: Log in
-        login_button: Log in
+        login: Login
+        login_button: Login
         logout: Logout
         manage: Manage
         menus: Menu
